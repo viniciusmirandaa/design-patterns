@@ -1,0 +1,12 @@
+Strategy:
+
+a utilização do design pattern strategy é conveniente quando se precisa encapsular algoritmos similares para tomar alguma decisão;
+a classe que usa o algoritmo não é alterada, mesmo recebendo outras opções de algoritmos futuramente (utilizando o conceito de polimorfismo);
+
+StrategyInterface: interface responsável por definir o método que as strategy concretas vão implementar;
+Context: classe que vai receber a StrategyInterface como polimorfismo, recebendo assim, todas as strategy concretas que implementaram a interface;
+Strategy Concreta: classes que vão implementar a strategy interface.
+
+
+
+

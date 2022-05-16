@@ -1,0 +1,4 @@
+Factory:
+
+A complexidade de criação de um objeto fica em uma classe diferente da que irá utilizá-lo. Uma forma simples e eficiente de desacoplar os códigos, tornando a manutenção mais fácil,
+uma vez que se necessário mudar a lógica de negócio da criação do objeto, não é preciso mudar todas as classes que estejam ultilizando o mesmo.

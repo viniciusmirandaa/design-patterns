@@ -1,0 +1,3 @@
+Singleton pattern:
+
+Limita que possa existir apenas um objeto instanciado.

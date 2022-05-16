@@ -1,0 +1,3 @@
+Abstract Factory:
+
+Has the same idea of Factory pattern, but instead of creating a single concrete object, the arquitecture demands to create multiple objects.

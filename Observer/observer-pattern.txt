@@ -1,0 +1,19 @@
+Observer:
+
+Quando é necessário ter um observador(cliente) e observado(servidor).
+
+ObservableInterface - Interface que vai possuir métodos de add e remove recevendo o observado como paramentro;
+
+add(Observer)
+remove(Observer)
+notify() - responsável por notificar os observadores sobre a informação dependente
+
+ObserverInterface - Interface da(s) entidade(s) que vão depender dos dados do observable;
+
+update() - método responsável por dar um update nas informações que foram passadas pelo observable
+
+ConcreteObservable - classe concreta responsável por implementar a interface observable
+
+ConcreteObserver - classe concreta responsável por implementar a interface observer, é necessário possuir um objeto do tipo ConcreteObservable em seu construtor, para quando for 
+retornado um boolean true no notify da classe ConcreteObservable, através desse objeto passado no construtor da classe, ser possivel o acesso aos dados
+

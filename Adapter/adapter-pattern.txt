@@ -1,0 +1,3 @@
+Adapter Pattern:
+
+Quando um cliente necessita de um tipo de request, porém por algum motivo esse request precisa ser modificado.

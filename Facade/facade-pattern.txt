@@ -1,0 +1,3 @@
+Facade pattern:
+
+Permite que a(s) classe(s) complexas possam ser isoladas do usuário, de forma que seja exibido apenas o necessário.

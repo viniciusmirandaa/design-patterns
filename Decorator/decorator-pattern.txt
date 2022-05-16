@@ -1,0 +1,58 @@
+Decorator: 
+
+Quando o problema na arquitetura da solução se encontra em definir em uma classe abstrata ou interface (java versão 8 p cima) todas as possibilidades que as classes concretas
+vão implementar. Ex:
+
+Bebidas
+
+getDesc()
+custo()
+temLeite()
+temChocolate()
+temSoja()
+...
+
+Expresso
+
+após a implementação da classe Bebidas, deverá definir a implementação dos metódos abstratos e/ou utilização dos metódos concretos.
+
+Café
+
+após a implementação da classe Bebidas, deverá definir a implementação dos metódos abstratos e/ou utilização dos metódos concretos.
+
+Chá
+
+após a implementação da classe Bebidas, deverá definir a implementação dos metódos abstratos e/ou utilização dos metódos concretos.
+Porém, se encontra um problema, no qual o método SOLID condena, que é a herança de metódos inuteis para a classe em questão. No nosso exemplo a classe Chá irá herdar/implementar métodos 
+que não cabe a ela. A solução para isso seria dessentralizar os métodos abstratos de uma só entidade e dividir. Porém existem outros problemas relacionados à essa arquitetura.
+
+Outro problema presente em todas as classes concretas listadas é o fato de que em uma cafeteria existe a possibilidade de haver muitos outros acréscimos de sabores. O que faria ter
+que adicionar sempre a classe abstrata/interface Bebidas. E se for um método abstrato, faria que todas as classes concretas que herdam/implementam, terem que fazer alterações também.
+
+
+Solução:
+
+Realizar a construção de uma classe abstrata chamada AddonsDecorator, com o objetivo de ter e ser uma Bebida. dessa forma os acréscimos que vão no café/chá serão classes concretas 
+dessa abstrata. As classes concretas vão possuir instancias do tipo Bebida para dentro do método cost() ser feito o cálculo. 
+
+public class Expresso extends/implements Bebidas(){
+
+	public int cost(){
+		return 1;
+	}
+	Bebidas b = new Caramelo(new Expresso());
+	b.cost();
+} 
+
+public class Caramelo extends/implements AddonsDecorator(){
+	
+	Bebidas b;
+	
+	public Caramelo(Bebidas b){
+		this.b = b;
+	}
+
+	public int cost(){
+		return b.cost() + 2;
+	}
+}

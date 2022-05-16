@@ -1,0 +1,3 @@
+Command Pattern:
+
+Ao invés de encapsularmos o objeto em si, encapsulamos o comando que vai ativar esse objeto.
